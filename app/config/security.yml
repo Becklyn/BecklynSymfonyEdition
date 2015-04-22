@@ -3,10 +3,35 @@ security:
         in_memory:
             memory: ~
 
+    encoders:
+        Symfony\Component\Security\Core\User\User:
+            algorithm: bcrypt
+            cost: 12
+
     firewalls:
         dev:
-            pattern: ^/(_(profiler|wdt|error)|css|images|js)/
+            pattern: ^/(_(profiler|wdt|error)|css|images|js|assets|bundles)/
             security: false
 
-        default:
+#        login:
+#            pattern: ^/admin/login/?$
+#            security: false
+
+        secured_area:
+            pattern: ^/
             anonymous: ~
+#            form_login:
+#                login_path:          login
+#                check_path:          login_check
+#                default_target_path: admin
+#                username_parameter: "login[username]"
+#                password_parameter: "login[password]"
+#                csrf_parameter:     "login[_token]"
+#                intention:          authenticate
+#                remember_me:        true
+#            logout:
+#                path:   logout
+#                target: login
+
+    access_control:
+#        - { path: ^/admin, roles: ROLE_ADMIN }
