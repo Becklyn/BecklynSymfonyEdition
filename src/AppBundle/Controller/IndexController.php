@@ -2,12 +2,15 @@
 
 namespace AppBundle\Controller;
 
+use Becklyn\RadBundle\Controller\BaseController;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 
 
-class IndexController extends Controller
+/**
+ *
+ */
+class IndexController extends BaseController
 {
     /**
      * @Route("/", name="homepage")
