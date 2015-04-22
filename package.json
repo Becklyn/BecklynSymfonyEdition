@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "devDependencies": {
+    "babel-core": "^4.7",
+    "becklyn-gulp": "^1.0",
+    "gulp": "^3.8"
+  }
+}
