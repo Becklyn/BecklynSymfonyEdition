@@ -21,11 +21,23 @@ monolog:
     handlers:
         main:
             type:         fingers_crossed
-            action_level: error
-            handler:      nested
-        nested:
+            action_level: critical
+            handler:      grouped
+        grouped:
+            type: group
+            members: [streamed, buffered]
+        streamed:
             type:  stream
-            path:  "%kernel.logs_dir%/%kernel.environment%.log"
+            path:  %kernel.logs_dir%/%kernel.environment%.log
+            level: error
+        buffered:
+            type: buffer
+            handler: swift
+        swift:
+            type:  swift_mailer
+            from_email: "error@becklyn.com"
+            to_email: "monitoring+#> project_name <#@becklyn.com"
+            subject: "CRITICAL ERROR in #> project_name <#"
             level: debug
         console:
             type:  console

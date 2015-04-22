@@ -76,7 +76,8 @@ class Composer
     private static function updateMainConfig (IOInterface $io, $projectName, $configuredAppPath)
     {
         $replacements = [
-            "#> session_name <#" => $projectName . "_session"
+            "#> session_name <#" => $projectName . "_session",
+            "#> project_name <#" => $projectName,
         ];
 
         $io->write([
@@ -86,9 +87,11 @@ class Composer
             "",
             "The following settings are updated:",
             "-> <fg=yellow>framework.session.name</fg=yellow>: {$replacements['#> session_name <#']}",
+            "-> <fg=yellow>monolog.handlers.swift</fg=yellow> (prod): Plus address and mail subject to: {$replacements['#> project_name <#']}",
         ]);
 
         self::replaceInAppFile("config/config.yml", $replacements);
+        self::replaceInAppFile("config/config_prod.yml", $replacements);
     }
 
 
