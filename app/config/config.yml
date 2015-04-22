@@ -18,7 +18,7 @@ framework:
     trusted_hosts:   ~
     trusted_proxies: ~
     session:
-        name:       becklyn_sessions
+        name:       #> session_name <#
         save_path:  "%kernel.root_dir%/../var/sessions"
     fragments:       ~
     http_method_override: true
