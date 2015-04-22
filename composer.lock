@@ -4,8 +4,52 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "79219419fd544b45dbcb19aa1af0ef41",
+    "hash": "023b56766c9cdcdd51b1411a59dd48da",
     "packages": [
+        {
+            "name": "becklyn/rad-bundle",
+            "version": "v2.2.19",
+            "target-dir": "Becklyn/RadBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Becklyn/BecklynRadBundle.git",
+                "reference": "263447f3887a8214c8c10fce2a5ee6cc1ed321e5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Becklyn/BecklynRadBundle/zipball/263447f3887a8214c8c10fce2a5ee6cc1ed321e5",
+                "reference": "263447f3887a8214c8c10fce2a5ee6cc1ed321e5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "symfony/framework-bundle": "~2.0",
+                "twig/twig": "~1.15"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Becklyn\\RadBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Becklyn GmbH",
+                    "homepage": "http://becklyn.com/"
+                }
+            ],
+            "description": "This bundle provides basic components",
+            "homepage": "https://github.com/Becklyn/BecklynRadBundle",
+            "keywords": [
+                "rad",
+                "symfony"
+            ],
+            "time": "2015-03-17 07:39:29"
+        },
         {
             "name": "doctrine/annotations",
             "version": "v1.2.4",
