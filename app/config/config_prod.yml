@@ -34,26 +34,16 @@ monolog:
             path:  %kernel.logs_dir%/%kernel.environment%.log
             level: error
 
-        # remote logging: buffered for HipChat & email
+        # remote logging: buffered for email
         remote_buffered:
             type:    buffer
-            handler: remote_buffered_group
-        remote_buffered_group:
-            type:     group
-            members: [remote_mail, remote_hipchat]
+            handler: remote_mail
         remote_mail:
             type:       swift_mailer
             from_email: "error@becklyn.com"
             to_email:   "monitoring+#> project_name <#@becklyn.com"
             subject:    "CRITICAL ERROR in #> project_name <#"
             level:      debug
-        remote_hipchat:
-            type:       hipchat
-            token:      "%logging.hipchat.token%"
-            room:       1445959
-            notify:     true
-            nickname:   #> project_name <#
-            level:      warning
 
         # console logging
         console:
