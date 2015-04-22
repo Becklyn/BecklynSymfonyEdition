@@ -1,13 +1,13 @@
 /web/bundles/
-/app/bootstrap.php.cache
 /app/config/parameters.yml
 /var/cache/*
 /var/logs/*
 /var/sessions/*
+/var/bootstrap.php.cache
 !/var/cache/.gitkeep
 !/var/logs/.gitkeep
 !/var/sessions/.gitkeep
-/app/phpunit.xml
+/phpunit.xml
 
 
 # Build & Deploy

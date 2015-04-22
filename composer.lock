@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "023b56766c9cdcdd51b1411a59dd48da",
+    "hash": "439d960da299acd5a96bbdde11b327c6",
     "packages": [
         {
             "name": "becklyn/rad-bundle",
