@@ -19,25 +19,42 @@ doctrine:
 
 monolog:
     handlers:
+        # web requests: logging to local file and buffered logging to HipChat & email monitoring
         main:
             type:         fingers_crossed
             action_level: critical
-            handler:      grouped
-        grouped:
-            type: group
-            members: [streamed, buffered]
-        streamed:
+            handler:      top_level_group
+        top_level_group:
+            type:    group
+            members: [local_log_file, remote_buffered]
+
+        # local logging: direct to log file
+        local_log_file:
             type:  stream
             path:  %kernel.logs_dir%/%kernel.environment%.log
             level: error
-        buffered:
-            type: buffer
-            handler: swift
-        swift:
-            type:  swift_mailer
+
+        # remote logging: buffered for HipChat & email
+        remote_buffered:
+            type:    buffer
+            handler: remote_buffered_group
+        remote_buffered_group:
+            type:     group
+            members: [remote_mail, remote_hipchat]
+        remote_mail:
+            type:       swift_mailer
             from_email: "error@becklyn.com"
-            to_email: "monitoring+#> project_name <#@becklyn.com"
-            subject: "CRITICAL ERROR in #> project_name <#"
-            level: debug
+            to_email:   "monitoring+#> project_name <#@becklyn.com"
+            subject:    "CRITICAL ERROR in #> project_name <#"
+            level:      debug
+        remote_hipchat:
+            type:       hipchat
+            token:      "%logging.hipchat.token%"
+            room:       1445959
+            notify:     true
+            nickname:   #> project_name <#
+            level:      warning
+
+        # console logging
         console:
             type:  console
