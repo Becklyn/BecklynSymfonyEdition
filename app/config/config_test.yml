@@ -13,9 +13,9 @@ doctrine:
         user:     root
         password: root
 
+swiftmailer:
+    disable_delivery: true
+
 web_profiler:
     toolbar: false
     intercept_redirects: false
-
-swiftmailer:
-    disable_delivery: true
