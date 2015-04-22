@@ -1,8 +1,9 @@
 {
-    "name": "symfony/framework-standard-edition",
-    "license": "MIT",
-    "type": "project",
-    "description": "The \"Symfony Standard Edition\" distribution",
+    "name":        "becklyn/symfony-edition",
+    "description": "This is a fork of the Symfony standard edition, that automatically adds typical configuration settings as used by Becklyn.",
+    "keywords":    ["symfony"],
+    "license":     "BSD-3-Clause",
+    "type":        "project",
     "autoload": {
         "psr-0": { "": "src/", "SymfonyStandard": "app/" }
     },
