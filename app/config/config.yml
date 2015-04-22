@@ -35,8 +35,6 @@ doctrine:
         host:     127.0.0.1
         port:     ~
         dbname:   "%database_name%"
-        user:     "%database.user%"
-        password: "%database.password%"
         charset:  UTF8
     orm:
         auto_generate_proxy_classes: "%kernel.debug%"
