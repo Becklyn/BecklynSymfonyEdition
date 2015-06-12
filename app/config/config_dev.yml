@@ -7,11 +7,6 @@ framework:
         strict_requirements: true
     profiler: { only_exceptions: false }
 
-doctrine:
-    dbal:
-        user:     root
-        password: root
-
 swiftmailer:
     delivery_address: %dev_delivery_address%
 

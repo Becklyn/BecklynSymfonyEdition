@@ -2,6 +2,8 @@
 parameters:
     # Database config
     database_name:     symfony
+    database_user:     root
+    database_password: root
 
     # Mailer config
     dev_delivery_address: ~

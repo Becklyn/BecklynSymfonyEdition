@@ -8,11 +8,6 @@ framework:
     profiler:
         collect: false
 
-doctrine:
-    dbal:
-        user:     root
-        password: root
-
 swiftmailer:
     disable_delivery: true
 
