@@ -3,7 +3,6 @@
 namespace AppBundle\Controller;
 
 use Becklyn\RadBundle\Controller\BaseController;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Response;
 
 
@@ -13,9 +12,9 @@ use Symfony\Component\HttpFoundation\Response;
 class IndexController extends BaseController
 {
     /**
-     * @Route("/", name="homepage")
+     * Displays the homepage
      */
-    public function indexAction()
+    public function homepageAction()
     {
         return new Response("Becklyn web project");
     }
