@@ -21,9 +21,6 @@
         "incenteev/composer-parameter-handler": "^2.0",
         "becklyn/rad-bundle": "^2.2"
     },
-    "require-dev": {
-        "sensio/generator-bundle": "^2.3"
-    },
     "scripts": {
         "post-root-package-install": [
             "BecklynSymfony\\Composer::hookRootPackageInstall"
