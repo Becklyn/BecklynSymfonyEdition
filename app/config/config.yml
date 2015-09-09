@@ -20,6 +20,7 @@ framework:
     session:
         name:       #> session_name <#
         save_path:  "%kernel.root_dir%/../var/sessions"
+        cookie_httponly: true
     fragments:       ~
     http_method_override: true
 
