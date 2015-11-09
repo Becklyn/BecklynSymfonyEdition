@@ -9,7 +9,5 @@ parameters:
     mailer_host:          127.0.0.1
     dev_delivery_address: monitoring@becklyn.com
 
-    locale:            de
-
     # A secret key that's used to generate certain security-related tokens
     secret:            ThisTokenIsNotSoSecretChangeIt
