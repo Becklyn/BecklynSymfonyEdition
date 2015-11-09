@@ -5,7 +5,9 @@
     "license":     "BSD-3-Clause",
     "type":        "project",
     "autoload": {
-        "psr-0": { "": "src/", "BecklynSymfony": "app/" }
+        "psr-0": { "BecklynSymfony": "app/" },
+        "psr-4": { "": "src/" },
+        "files": [ "app/AppKernel.php" ]
     },
     "require": {
         "php": ">=5.3.9",

@@ -18,8 +18,6 @@ if (!$localAccess->allowLocalAccess())
 $loader = require_once __DIR__.'/../var/bootstrap.php.cache';
 Debug::enable();
 
-require_once __DIR__.'/../app/AppKernel.php';
-
 $kernel = new AppKernel('dev', true);
 $kernel->loadClassCache();
 $request = Request::createFromGlobals();
