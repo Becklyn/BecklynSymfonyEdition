@@ -7,7 +7,7 @@ parameters:
 
     # Mailer config
     mailer_host:          127.0.0.1
-    dev_delivery_address: ~
+    dev_delivery_address: monitoring@becklyn.com
 
     locale:            de
 
