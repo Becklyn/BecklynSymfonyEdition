@@ -6,6 +6,7 @@ parameters:
     database_password: root
 
     # Mailer config
+    mailer_host:          127.0.0.1
     dev_delivery_address: ~
 
     locale:            de
