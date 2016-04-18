@@ -14,8 +14,8 @@
 /deploy
 node_modules
 /vendor/
-/**/Resources/public/css
-/**/Resources/public/js
+/src/**/Resources/public/css
+/src/**/Resources/public/js
 
 
 # Debug
