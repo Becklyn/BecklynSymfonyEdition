@@ -5,6 +5,9 @@ use Symfony\Component\Config\Loader\LoaderInterface;
 
 class AppKernel extends Kernel
 {
+    /**
+     * {@inheritDoc}
+     */
     public function registerBundles()
     {
         $bundles = array(
@@ -37,9 +40,35 @@ class AppKernel extends Kernel
     }
 
 
+    /**
+     * {@inheritDoc}
+     */
+    public function getRootDir()
+    {
+        return __DIR__;
+    }
+
 
     /**
-     * @inheritdoc
+     * {@inheritDoc}
+     */
+    public function getCacheDir()
+    {
+        return dirname(__DIR__) . '/var/cache/' .$this->getEnvironment();
+    }
+
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getLogDir()
+    {
+        return dirname(__DIR__) . '/var/logs';
+    }
+
+
+    /**
+     * {@inheritDoc}
      */
     public function registerContainerConfiguration(LoaderInterface $loader)
     {
