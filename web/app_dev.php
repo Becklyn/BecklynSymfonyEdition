@@ -1,14 +1,11 @@
 <?php
 
-require_once __DIR__.'/../app/BecklynSymfony/LocalAccess.php';
-
-use BecklynSymfony\LocalAccess;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Debug\Debug;
 
 // This check prevents access to debug front controllers that are deployed by accident to production servers.
 // Feel free to remove this, extend it, or make something more sophisticated.
-$localAccess = new LocalAccess($_SERVER);
+$localAccess = new \BecklynSymfonyBase\LocalAccess($_SERVER);
 if (!$localAccess->allowLocalAccess())
 {
     header('HTTP/1.0 403 Forbidden');
