@@ -7,10 +7,6 @@ framework:
         strict_requirements: true
     profiler: { only_exceptions: false }
 
-swiftmailer:
-    delivery_address: %dev_delivery_address%
-
-
 web_profiler:
     toolbar: true
     intercept_redirects: false
@@ -24,16 +20,7 @@ monolog:
             channels: [!event]
         console:
             type:   console
-            bubble: false
-            verbosity_levels:
-                VERBOSITY_VERBOSE: INFO
-                VERBOSITY_VERY_VERBOSE: DEBUG
-            channels: ["!doctrine"]
-        console_very_verbose:
-            type:   console
-            bubble: false
-            verbosity_levels:
-                VERBOSITY_VERBOSE: NOTICE
-                VERBOSITY_VERY_VERBOSE: NOTICE
-                VERBOSITY_DEBUG: DEBUG
-            channels: ["doctrine"]
+            channels: [!event, !doctrine]
+
+swiftmailer:
+    delivery_address: %dev_delivery_address%

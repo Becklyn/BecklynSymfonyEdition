@@ -1,12 +1,13 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
-    - { resource: services.yml }
 
+# Parameters, that don't need to change between the machines
 parameters:
     locale: de
 
 framework:
+    #esi:             ~
     #translator:      { fallbacks: ["%locale%"] }
     secret:          "%secret%"
     router:
@@ -15,6 +16,7 @@ framework:
     form:            ~
     csrf_protection: ~
     validation:      { enable_annotations: true }
+    #serializer:      { enable_annotations: true }
     templating:
         engines: ['twig']
     default_locale:  "%locale%"
@@ -26,6 +28,7 @@ framework:
         cookie_httponly: true
     fragments:       ~
     http_method_override: true
+    assets: ~
 
 # Twig Configuration
 twig:
@@ -44,12 +47,13 @@ doctrine:
         charset:  UTF8
     orm:
         auto_generate_proxy_classes: "%kernel.debug%"
+        naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
 
 # Swiftmailer Configuration
 swiftmailer:
     transport: smtp
-    host:      %mailer_host%
+    host:      "%mailer_host%"
     username:  ~
     password:  ~
     spool:     { type: memory }
