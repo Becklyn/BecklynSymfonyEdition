@@ -9,12 +9,15 @@ security:
             cost: 12
 
     firewalls:
+
+        # disables authentication for assets and the profiler
         dev:
-            pattern: ^/(_(profiler|wdt|error)|css|images|js|assets|bundles)/
+            pattern: ^/(_(profiler|wdt)|css|images|js|bundles)/
             security: false
 
+        # Disable security for login page
 #        login:
-#            pattern: ^/admin/login/?$
+#            pattern: ^/login/?$
 #            security: false
 
         secured_area:
