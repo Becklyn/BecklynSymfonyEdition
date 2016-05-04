@@ -2,7 +2,8 @@
 
 namespace AppBundle;
 
-use Symfony\Component\HttpKernel\Bundle\Bundle;
+use Becklyn\RadBundle\AppBundle\Bundle;
+
 
 class AppBundle extends Bundle
 {
