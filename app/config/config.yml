@@ -23,7 +23,7 @@ framework:
     trusted_hosts:   ~
     trusted_proxies: ~
     session:
-        name:       #> session_name <#
+        name:       "becklyn_app_session"
         save_path:  "%kernel.root_dir%/../var/sessions"
         cookie_httponly: true
     fragments:       ~

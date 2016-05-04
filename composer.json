@@ -29,9 +29,6 @@
         "symfony/phpunit-bridge": "^3.0"
     },
     "scripts": {
-        "post-root-package-install": [
-            "BecklynSymfonyBase\\Composer::hookRootPackageInstall"
-        ],
         "post-install-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
