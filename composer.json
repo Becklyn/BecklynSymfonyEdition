@@ -22,7 +22,7 @@
         "sensio/framework-extra-bundle": "^3.0.2",
         "incenteev/composer-parameter-handler": "^2.0",
         "becklyn/symfony-base": "^1.0",
-        "becklyn/rad-bundle": "v3.x-dev",
+        "becklyn/rad-bundle": "^4.0.0-beta.1",
         "raven/raven": "^0.15.0"
     },
     "require-dev": {
