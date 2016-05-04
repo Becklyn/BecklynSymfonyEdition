@@ -7,9 +7,12 @@
         <title>{% block title %}{% endblock %}</title>
 
         {% block stylesheets %}{% endblock %}
+
+        {{ monitoringCode() }}
+
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
     </head>
-    <body {% block body_attributes %}{% endblock %}>
+    <body>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
