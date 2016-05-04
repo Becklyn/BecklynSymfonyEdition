@@ -23,4 +23,4 @@ monolog:
             channels: [!event, !doctrine]
 
 swiftmailer:
-    delivery_address: %dev_delivery_address%
+    delivery_address: "%dev_delivery_address%"
