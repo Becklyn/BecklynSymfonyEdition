@@ -1,31 +1,36 @@
 {
-    "name":        "becklyn/symfony-edition",
+    "name": "becklyn/symfony-edition",
+    "license": "BSD-3-Clause",
+    "type": "project",
     "description": "This is a fork of the Symfony standard edition, that automatically adds typical configuration settings as used by Becklyn.",
-    "keywords":    ["symfony"],
-    "license":     "BSD-3-Clause",
-    "type":        "project",
     "autoload": {
-        "psr-4": { "": "src/", "BecklynSymfony\\": "app/BecklynSymfony/" },
-        "files": [ "app/AppKernel.php" ]
+        "psr-4": { "": "src/" },
+        "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
+    },
+    "autoload-dev": {
+        "psr-4": { "Tests\\": "tests/" }
     },
     "require": {
-        "php": ">=5.3.9",
-        "symfony/symfony": "^2.7",
-        "doctrine/orm": "^2.2.3,<2.5",
-        "doctrine/dbal": "<2.5",
-        "doctrine/doctrine-bundle": "^1.4",
-        "twig/extensions": "^1.0",
+        "php": "^5.5|^7.0",
+        "symfony/symfony": "^3.0",
+        "doctrine/orm": "^2.5",
+        "doctrine/doctrine-bundle": "^1.6",
+        "doctrine/doctrine-cache-bundle": "^1.2",
         "symfony/swiftmailer-bundle": "^2.3",
-        "symfony/monolog-bundle": "^2.4",
-        "sensio/distribution-bundle": "^4.0",
+        "symfony/monolog-bundle": "^2.8",
+        "sensio/distribution-bundle": "^5.0",
         "sensio/framework-extra-bundle": "^3.0.2",
         "incenteev/composer-parameter-handler": "^2.0",
-        "becklyn/symfony-base": "dev-master",
-        "becklyn/rad-bundle": "^2.2"
+        "becklyn/symfony-base": "^1.0",
+        "becklyn/rad-bundle": "v3.x-dev",
+        "raven/raven": "^0.15.0"
+    },
+    "require-dev": {
+        "symfony/phpunit-bridge": "^3.0"
     },
     "scripts": {
         "post-root-package-install": [
-            "BecklynSymfony\\Composer::hookRootPackageInstall"
+            "BecklynSymfonyBase\\Composer::hookRootPackageInstall"
         ],
         "post-install-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
@@ -33,7 +38,6 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::removeSymfonyStandardFiles",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
         ],
         "post-update-cmd": [
@@ -42,7 +46,6 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::removeSymfonyStandardFiles",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
         ]
     },
@@ -51,6 +54,7 @@
         "symfony-bin-dir": "bin",
         "symfony-var-dir": "var",
         "symfony-web-dir": "web",
+        "symfony-tests-dir": "tests",
         "symfony-assets-install": "relative",
         "incenteev-parameters": {
             "file": "app/config/parameters.yml"
