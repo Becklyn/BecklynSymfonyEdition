@@ -30,7 +30,7 @@ security:
 #                username_parameter: "login[username]"
 #                password_parameter: "login[password]"
 #                csrf_parameter:     "login[_token]"
-#                intention:          authenticate
+#                csrf_token_id:      authenticate
 #                remember_me:        true
 #            logout:
 #                path:   logout
