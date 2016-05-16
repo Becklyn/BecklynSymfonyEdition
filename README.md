@@ -10,3 +10,9 @@ Installation
 ```bash
 $ composer create-project becklyn/symfony-edition path
 ```
+
+**Important:**
+
+> Do you want to remove the existing VCS (.git, .svn..) history? [Y,n]
+
+Choose `Y` (or just hit enter, as `Y` is the default).
