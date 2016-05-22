@@ -1,12 +1,14 @@
 security:
-    providers:
-        in_memory:
-            memory: ~
-
-    encoders:
-        Symfony\Component\Security\Core\User\User:
-            algorithm: bcrypt
-            cost: 12
+#    providers:
+#        db:
+#            entity:
+#                class: "AppBundle:User"
+#                property: email
+#
+#    encoders:
+#        AppBundle\Entity\User:
+#            algorithm: bcrypt
+#            cost: 12
 
     firewalls:
 
