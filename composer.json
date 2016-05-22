@@ -23,7 +23,7 @@
         "incenteev/composer-parameter-handler": "^2.0",
         "becklyn/symfony-base": "^1.0",
         "becklyn/rad-bundle": "^4.0.0-beta.1",
-        "raven/raven": "^0.15.0"
+        "sentry/sentry": "^0.18.0"
     },
     "require-dev": {
         "symfony/phpunit-bridge": "^3.0"
