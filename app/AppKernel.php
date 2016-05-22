@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             // endregion
 
             // region Extension bundles
+            new \Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
             new \Becklyn\RadBundle\BecklynRadBundle(),
             // endregion
 
