@@ -11,7 +11,7 @@
         "psr-4": { "Tests\\": "tests/" }
     },
     "require": {
-        "php": "^5.5|^7.0",
+        "php": "^7.0.7",
         "symfony/symfony": "^3.0",
         "doctrine/orm": "^2.5",
         "doctrine/doctrine-bundle": "^1.6",
@@ -24,7 +24,8 @@
         "becklyn/symfony-base": "^1.0",
         "becklyn/rad-bundle": "^4.0.0-beta.1",
         "sentry/sentry": "^0.18.0",
-        "doctrine/doctrine-migrations-bundle": "^1.1"
+        "doctrine/doctrine-migrations-bundle": "^1.1",
+        "ocramius/proxy-manager": "^2.0.2"
     },
     "require-dev": {
         "symfony/phpunit-bridge": "^3.0"
