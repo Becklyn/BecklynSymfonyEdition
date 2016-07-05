@@ -1,5 +1,7 @@
 security:
-#    providers:
+    providers:
+        in_memory:
+            memory: ~
 #        db:
 #            entity:
 #                class: "AppBundle:User"
