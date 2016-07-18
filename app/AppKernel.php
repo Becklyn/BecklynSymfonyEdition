@@ -42,7 +42,7 @@ class AppKernel extends Kernel
 
 
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public function getRootDir ()
     {
@@ -52,7 +52,7 @@ class AppKernel extends Kernel
 
 
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public function getCacheDir ()
     {
@@ -62,7 +62,7 @@ class AppKernel extends Kernel
 
 
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public function getLogDir ()
     {
@@ -72,7 +72,7 @@ class AppKernel extends Kernel
 
 
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public function registerContainerConfiguration (LoaderInterface $loader)
     {
