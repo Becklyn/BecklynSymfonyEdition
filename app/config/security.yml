@@ -29,11 +29,11 @@ security:
             anonymous: ~
 #            form_login:
 #                login_path:          login
-#                check_path:          login_check
+#                check_path:          _login_check
 #                default_target_path: admin
-#                username_parameter: "login[username]"
-#                password_parameter: "login[password]"
-#                csrf_parameter:     "login[_token]"
+#                username_parameter: "appLogin[username]"
+#                password_parameter: "appLogin[password]"
+#                csrf_parameter:     "appLogin[_token]"
 #                csrf_token_id:      authenticate
 #                remember_me:        true
 #            logout:
