@@ -13,4 +13,4 @@ parameters:
     secret:            ThisTokenIsNotSoSecretChangeIt
 
     # Monitoring config
-    becklyn.monitoring.dsn: ~
+    becklyn.monitoring.api_key: ~
