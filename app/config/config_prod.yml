@@ -31,4 +31,5 @@ monolog:
         console:
             type:  console
 
-        # Sentry monitoring is added automatically, if the DSN is set in the parameters
+becklyn_bugsnag:
+    api_key: '%becklyn.monitoring.api_key%'
