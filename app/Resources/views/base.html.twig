@@ -13,7 +13,11 @@
 
         {{ bugsnagJavaScriptClient() }}
 
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
+        <link rel="icon" sizes="16x16 32x32 48x48" href="{{ asset('favicon.ico') }}">
+        <link rel="apple-touch-icon-precomposed" href="{{ asset('apple-touch-icon-precomposed.png') }}">
+        <meta name="msapplication-TileColor" content="#1C57E1">
+        <meta name="msapplication-TileImage" content="{{ asset('metro-tile-icon.png') }}">
     </head>
     <body {% block body_attributes "" %} >
         {% block body "" %}
