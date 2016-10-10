@@ -13,6 +13,7 @@
 !/var/SymfonyRequirements.php
 /vendor/
 /web/bundles/
+/web/app_dev.php
 
 
 # Build & Deploy
