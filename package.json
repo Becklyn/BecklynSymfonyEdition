@@ -1,6 +1,6 @@
 {
   "private": true,
   "devDependencies": {
-    "kaba": "^1.1.1"
+    "kaba": "^2.0.0-beta.3"
   }
 }
