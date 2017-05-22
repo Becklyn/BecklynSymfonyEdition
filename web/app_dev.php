@@ -16,6 +16,7 @@ if (!$localAccess->allowLocalAccess())
     header('HTTP/1.0 403 Forbidden');
     exit("Forbidden.");
 }
+
 Debug::enable();
 
 $kernel = new AppKernel('dev', true);
