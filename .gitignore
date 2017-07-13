@@ -18,7 +18,8 @@
 
 # Build & Deploy
 /deploy
-node_modules
+/node_modules
+/.ssh
 
 
 # Debug
